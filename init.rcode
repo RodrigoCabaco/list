@@ -1,0 +1,7 @@
+import list_contains
+
+function __list_init();{
+    list_contains()
+}__list_init;
+
+__list_init()
