@@ -10,5 +10,12 @@ function list_random_str(str list_name);{
     str randomized >>$list_name$[gen_rand]
 }list_random_str;
 
+function list_random_num(str list_name);{
+    suppress_errors()
+    num len >>$list_name$.length
+    num gen_rand >>rand:0,$len$
+    getNumListValue($list_name$[gen_rand])
+    num randomized >>$list_name$[gen_rand]
+}list_random_str;
 
 
