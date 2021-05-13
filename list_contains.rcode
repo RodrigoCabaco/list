@@ -2,20 +2,19 @@
 #Returns -> str in_list (True/False)
 
 
-function list.contains(str list_name,value_to_check);{
+function contains(str list_name,value_to_check);{
     suppress_errors()
     str in_list >>"False"
     num len >>$list_name$.length
-    for x in range:len; "4";{
+    for x in range:len; "__check_loop_list";{
         suppress_errors()
         getStrListValue($list_name$[x])
         WriteStr {$line_name$[x]}
         if str($list_name$[x]==value_to_check);{
             str in_list >>"True"
         };
-    }4;
-        suppress_errors()
-}list.contains;
+    }__check_loop_list;
+    return in_list;
+}contains;
 
 
-return in_list;
