@@ -1,7 +1,3 @@
-import list_contains
-
-function __list_init();{
-    list_contains()
-}__list_init;
-
-__list_init()
+suppress_errors()
+$modules_path$.list.list_contains()
+$modules_path$.list.list_random()
