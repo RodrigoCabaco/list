@@ -2,13 +2,13 @@
 #Args: list_name, str type >>"str"/"num"
 #Returns -> randomized (Random value from first List)
 
-function list_random(str list_name, str type);{
+function list_random_str(str list_name);{
     suppress_errors()
-    num __list_len >>$list_name$.length
-    ;;num f >>rand:0,__list_len;;get$type$ListValue($list_name$[f])
-    $type$ randomized >>$list_name$[f]
-    return randomized;
-}list_random;
+    num len >>$list_name$.length
+    num gen_rand >>rand:0,$len$
+    getStrListValue($list_name$[gen_rand])
+    str randomized >>$list_name$[gen_rand]
+}list_random_str;
 
 
 
