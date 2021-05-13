@@ -7,7 +7,7 @@ function list_random_str(str list_name);{
     num len >>$list_name$.length
     num gen_rand >>rand:0,$len$
     getStrListValue($list_name$[gen_rand])
-    str randomized >>$list_name$[gen_rand]
+    ;;str randomized >>"";;str(randomized+$list_name$[gen_rand])
 }list_random_str;
 
 function list_random_num(str list_name);{
@@ -15,7 +15,8 @@ function list_random_num(str list_name);{
     num len >>$list_name$.length
     num gen_rand >>rand:0,$len$
     getNumListValue($list_name$[gen_rand])
-    num randomized >>$list_name$[gen_rand]
-}list_random_str;
+    num randomized >>0
+    randomized+$list_name$[gen_rand]
+}list_random_num;
 
 
