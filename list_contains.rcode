@@ -4,20 +4,12 @@
 
 suppress_errors()
 function list_contains(str list_name,value_to_check);{
-    suppress_errors()
     str in_list >>"False"
-    num len >>$list_name$.length
-    for x in range:len; "__check_loop_list";{
-        suppress_errors()
-        getStrListValue($list_name$[x])
-        WriteStr {$line_name$[x]}
-        if str($list_name$[x]==value_to_check);{
-            str in_list >>"True"
-            break;
-            return;
-        };
-    }__check_loop_list;
-    return;
-}list_contains;
+    num ind >>0
+    $list_name$.IndexOf:value_to_check; to:ind;
+    if num(ind!=-1);{
+        str in_list >>"True"
+    };
+};
 
 
