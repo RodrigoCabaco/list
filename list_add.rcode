@@ -1,0 +1,27 @@
+
+
+function add_to_list(str list_name, value):
+	num __index = 0
+	$list_name$.IndexOf:value; to:__index;
+	str final_append = "list(str) "
+	str(final_append+")"
+	str(final_append+$list_name$)
+	str(final_append+" >)"
+	str(final_append+>)
+	str(final_append+ [)
+	num len = $list_name$.length
+	for i in range:len:
+		lsval($list_name$[i])
+		str(final_append+")"
+		str(final_append+$list_name$[i])
+		str(final_append+",)"
+	str(final_append+")"
+	str(final_append+$value$)
+	str(final_append+"])"
+	for i in range:len:
+		suppress_errors()
+		$list_name$.RemoveAt(0)
+	$final_append$
+ 
+ #example
+ #add_to_list(str list_name = name;;str value = "Something"
